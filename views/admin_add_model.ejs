@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Moto-water</title>
+	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/admin_add_model.css">
+	<script>
+	function buttonClickSub(but) {
+	    var x = document.getElementsByClassName("hid-sub");
+	    if (but == "on") {
+			x[0].style.display = "block";
+		}
+		else {
+             x[0].style.display = "none";
+             document.location.href="/admin/add/model";
+		}
+    }
+	</script>
+</head>
+<body >
+	<div class="hid-sub" onclick=" buttonClickSub('off')">
+		<div class="sub">
+			Товар добавлен 
+		</div>
+	</div>
+	
+		<header>
+		<ul class="hdrlist">
+			<li>
+				<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="200" height="50"></a><p>
+			</li>
+			<li>
+				<ul class="listmenu">
+					<li>
+					   <a href="">ГЛАВНАЯ</a> 
+					</li>
+					<li>
+						<a href="">ДОСТАВКА И ОПЛАТА</a>
+					</li>
+					<li>
+						<a href="">КОНТАКТИ</a>
+					</li>
+					<li>
+						<a href="">КРЕДИТ</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="wrap" style="display: none;">
+					<div class="hdr-cab">
+						<a href="../auth/login"><img src="/images/kisspng-clip-art-computer-icons-user-download-chamber-of-d-talonpaw-svg-png-icon-free-download-175238-on-5b84c95a4d32a1.9639307815354289543162.png" alt="cabinet"width="42" height="42" >
+					</a>
+				</div>
+				<div class="hdr-bus"style="display: none;" >
+					<a href="../cart/orders">
+						<img src="/images/shopping-cart.svg" alt="basket"width="50" height="50" id="logocart" >
+					</a>
+				</div>
+				</div>
+			</li>
+		</ul>
+	</header>
+	<nav>
+		<div class="logo">
+			<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="350" height="100"></a><p>
+		</div>
+		<div class="wrap-list">
+			<ul class="list-nav">
+			<li>
+				<div class="filter" onclick="buttonClickfilter('on')" style="Cursor:pointer; display: none;">
+					<br><img src="/images/kisspng-computer-icons-filter-funnel-document-clip-art-5b27b2dea490a1.4319025915293283506741.png" alt="logo" width="60" height="30"></a>
+				</div>
+			</li>
+			<li>
+				<a href=""><b><br>ЛОДОЧНЫЕ МОТОРЫ</b></a>
+				<ul>
+					<li>
+						<a href=""><b>YAMAHA</b></a>
+					</li>
+					<li>
+						<a href=""><b>SUZUKI</b></a>
+					</li>
+					<li>
+						<a href=""><b>MERKURI</b></a>
+					</li>
+					<li>
+						<a href=""><b>TOHATSU</b></a>
+					</li>
+					<li>
+						<a href=""><b>PARSUN</b></a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href=""><b><br>РАСПРОДАЖА</b></a>
+			</li>
+			<li>
+				<a href=""><b><br>БРЕНДЫ</b></a>
+			</li>
+		</ul>
+		</div>
+	</nav>
+	
+	<main>
+		
+	<form method="post" action="/admin/add/" class="formAdd">
+		<div>
+			<p>Название мотора </p>
+			<input type="text" name="name">
+		</div>
+		<div>
+			<p>Описание мотора</p>
+			<input type="text" name="description">
+		</div>
+		<div>
+			<p>Tактовая частота</p>
+            <p><select name="storke" >
+                <option value="2">2-x</option>
+                <option value="4">4-x</option>
+            </select></p>
+		</div>
+		<div>
+			<p>Укажыте путь к картинке</p>
+			<label><input type="text" name="picture" value="<%= typeof file != 'undefined' ? file : '' %>"><a href="/admin/add/model/picture">Загрузить</a></label>
+		</div>
+		<img src="<%= typeof file != 'undefined' ? file : '' %>" alt="" height="200px" width="200px">
+		<div>
+			<p>Цена мотора</p>
+			<input type="text" name="price">
+		</div>
+		<div>
+			<p>Запуск мотора</p>
+			
+            <p><select name="start">
+                <option value="r" > ручной</option>
+                <option value="e" > електро</option>
+                <option value="er" > ручной + електро</option>
+            </select></p>
+		</div>
+		<div>
+			<p>Управление мотором</p>
+			<p><select name="control">
+                <option value="r" > румпель</option>
+                <option value="d" > дистанционое</option>
+                <option value="rd" > румпель+дистанционое</option>
+            </select></p>
+		</div>
+		<div>
+			<p>Бренд мотора</p>
+			<p><select name="brand" >
+                <option value="1"> Yamaha</option>
+                <option value="2"> Suzuki</option>
+                <option value="3"> Mercuri</option>
+                <option value="4"> Tohatsu</option>
+                <option value="5" > Parsun</option>
+            </select></p>
+		</div>
+		<div>
+			<p>Мощность мотора</p>
+			<input type="text" name="power">
+		</div>
+		<div>
+			<p>Обьем мотора</p>
+			<input type="text" name="volume">
+		</div>
+		<div>
+			<p>Масса мотора</p>
+			<input type="text" name="mass">
+		</div>
+		  <label><input type="submit" value="Подтвердить" onclick=" buttonClickSub('on')"></label>
+	</form>
+	</main>
+	
+	<footer>
+		
+	</footer>
+	</div>
+
+</body>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Moto-water</title>
+	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/order.css">
+	<script src="/jquery/jquery.js"></script>
+	 
+	 
+</head>
+<body>
+	<div class="hid-sub" onclick="returnCatalog()">
+		<div class="sub">
+			Заказ принято
+		</div>
+	</div>
+<div class="wrap">
+		<header>
+		<ul class="hdrlist">
+			<li>
+				<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="200" height="50"></a><p>
+			</li>
+			<li>
+				<ul class="listmenu">
+					<li>
+					   <a href="">ГЛАВНАЯ</a> 
+					</li>
+					<li>
+						<a href="">ДОСТАВКА И ОПЛАТА</a>
+					</li>
+					<li>
+						<a href="">КОНТАКТИ</a>
+					</li>
+					<li>
+						<a href="">КРЕДИТ</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="wrap">
+					<div class="hdr-cab">
+						<a href="../../auth/login"><img src="/images/kisspng-clip-art-computer-icons-user-download-chamber-of-d-talonpaw-svg-png-icon-free-download-175238-on-5b84c95a4d32a1.9639307815354289543162.png" alt="cabinet"width="42" height="42" >
+					</a>
+				</div>
+				<div class="hdr-bus">
+					<a href="">
+						<img src="/images/shopping-cart.svg" alt="basket"width="50" height="50" >
+					</a>
+				</div>
+				</div>
+			</li>
+		</ul>
+	</header>
+	<nav>
+		<div class="logo">
+			<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="350" height="100"></a><p>
+		</div>
+		<div class="wrap-list">
+			<ul class="list-nav">
+			<li>
+				<div class="filter" onclick="buttonClickfilter('on')">
+					<br><img src="/images/kisspng-computer-icons-filter-funnel-document-clip-art-5b27b2dea490a1.4319025915293283506741.png" alt="logo" width="60" height="30"></a>
+				</div>
+			</li>
+			<li>
+				<a href=""><b><br>ЛОДОЧНЫЕ МОТОРЫ</b></a>
+				<ul>
+					<li>
+						<a href=""><b>YAMAHA</b></a>
+					</li>
+					<li>
+						<a href=""><b>SUZUKI</b></a>
+					</li>
+					<li>
+						<a href=""><b>MERKURI</b></a>
+					</li>
+					<li>
+						<a href=""><b>TOHATSU</b></a>
+					</li>
+					<li>
+						<a href=""><b>PARSUN</b></a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href=""><b><br>РАСПРОДАЖА</b></a>
+			</li>
+			<li>
+				<a href=""><b><br>БРЕНДЫ</b></a>
+			</li>
+		</ul>
+		</div>
+	</nav>
+	<main>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/client/new" method="post">
+      	
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Оформление заказа</h3>
+            <label for="fname"><i class="fa fa-user"></i> Фамилия Имя Отчество</label>
+            <input type="text" id="fname" name="firstname" placeholder="Бандит Иван Иванович" pattern="^\D{1,50}$">
+
+            <label for="phone"><i class="fa fa-envelope"></i> Номер телефона</label>
+            <input type="text" id="phone" name="phone" placeholder="0976887654"pattern="^\d{1,10}$">
+
+            <label for="login"><i class="fa fa-envelope" value="grisha"></i> Логин почти</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+
+            <label for="adr"><i class="fa fa-address-card-o"></i> Адрес</label>
+            <input type="text" id="adr" name="address" placeholder="Киев, Украина"pattern="^\D{1,100}$">
+            
+
+            <div class="row">
+              <div class="col-50">
+                <label for="promocode">Промокод</label>
+                <input type="text" id="promocode" name="promocode" placeholder="10001"pattern="^\d{1,3}$">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input  value="Оформить заказ" class="btn" id="sub">
+        <input  value="Подтвердить заказ" class="btn" id="sub2">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Корзина<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b></b></span></h4>
+          <hr>
+          <div id="container">
+          	
+          </div>
+        <hr>
+      <p>Стоимость <span class="price" style="color:black"><b id="total"></b></span></p>
+    </div>
+  </div>
+</div>
+	</main>
+
+	<footer>
+		
+	</footer>
+	<script type="text/javascript" src="/javascripts/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Moto-water</title>
+	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/hidden.css">
+	<script src="/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/catalog_button.js"></script>
+	
+</head>
+<body>
+	<div class="hid-sub" onclick=" buttonClickSub('off')">
+		<div class="sub">
+			Товар добавлен в корзину
+		</div>
+	</div>
+	<div class="hid">
+        <div class="wraphidden">
+        <form class="hidden" action="/catalog/filter" method="post">
+              <div class="storke">
+					<h4>ТИП МОТОРОВ</h4>
+					<p><label><input type="checkbox" value="2" name="storke2"> 2-х тактные</label></p>
+					<p><label><input type="checkbox" value="4"name="storke4"> 4-х тактные</label></p>
+				</div>
+				<div class="start">
+					<h4>ЗАПУСК</h4>
+					<p><label><input type="checkbox" value="r" name="start_r"> ручной</label></p>
+					<p><label><input type="checkbox" value="e" name="start_e"> електро</label></p>
+					<p><label><input type="checkbox" value="er" name="start_er"> ручной + електро</label></p>
+				</div>
+				<div class="control">
+					<h4>УПРАВЛЕНИЕ МОТОРОМ</h4>
+					<p><label><input type="checkbox" value="r" name="control_r"> румпель</label></p>
+					<p><label><input type="checkbox" value="d" name="control_d"> дистанционое</label></p>
+					<p><label><input type="checkbox" value="rd" name="control_rd"> румпель+дистанционое</label></p>
+				</div>
+				<div сlass="power">
+					<h4>МОЩНОСТЬ МОТОРА</h4>
+					<p><label><input type="checkbox" value="3.5" name="power_1"> 2-3,5 л.с</label></p>
+					<p><label><input type="checkbox" value="7.5" name="power_2"> 4-7,5 л.с</label></p>
+					<p><label><input type="checkbox" value="15" name="power_3"> 8-15 л.с</label></p>
+					<p><label><input type="checkbox" value="25" name="power_4"> 18-25 л.с</label></p>
+					<p><label><input type="checkbox" value="40" name="power_5"> 30-40 л.с</label></p>
+					<p><label><input type="checkbox" value="70" name="power_6"> 50-70 л.с</label></p>
+					<p><label><input type="checkbox" value="300" name="power_7"> более 70 л.с</label></p>
+				</div>
+				<div class="button">
+					<p><label><button type="submit" style="display: none;cursor: pointer;"></button>ПРИМЕНИТЬ</label></p>
+					<p><label><button type="reset" style="display: none;cursor: pointer;"></button>СБРОСИТЬ</label></p>
+				</div>  
+            </form>
+            </div>
+            <div class="pole"  onclick=" buttonClickfilter('off')">
+            </div>
+             </div>
+	<div class="wrap">
+<div class="wrap">
+		<header>
+		<ul class="hdrlist">
+			<li>
+				<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="200" height="50"></a><p>
+			</li>
+			<li>
+				<ul class="listmenu">
+					<li>
+					   <a href="">ГЛАВНАЯ</a> 
+					</li>
+					<li>
+						<a href="">ДОСТАВКА И ОПЛАТА</a>
+					</li>
+					<li>
+						<a href="">КОНТАКТИ</a>
+					</li>
+					<li>
+						<a href="">КРЕДИТ</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="wrap">
+					<div class="hdr-cab">
+						<a href="../auth/login"><img src="/images/kisspng-clip-art-computer-icons-user-download-chamber-of-d-talonpaw-svg-png-icon-free-download-175238-on-5b84c95a4d32a1.9639307815354289543162.png" alt="cabinet"width="42" height="42" >
+					</a>
+				</div>
+				<div class="hdr-bus" >
+					<a href="../cart/orders">
+						<img src="/images/shopping-cart.svg" alt="basket"width="50" height="50" id="logocart" >
+					</a>
+				</div>
+				</div>
+			</li>
+		</ul>
+	</header>
+	<nav>
+		<div class="logo">
+			<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="350" height="100"></a><p>
+		</div>
+		<div class="wrap-list">
+			<ul class="list-nav">
+			<li>
+				<div class="filter" onclick="buttonClickfilter('on')" style="Cursor:pointer;">
+					<br><img src="/images/kisspng-computer-icons-filter-funnel-document-clip-art-5b27b2dea490a1.4319025915293283506741.png" alt="logo" width="60" height="30"></a>
+				</div>
+			</li>
+			<li>
+				<a href=""><b><br>ЛОДОЧНЫЕ МОТОРЫ</b></a>
+				<ul>
+					<li>
+						<a href="/catalog/1"><b>YAMAHA</b></a>
+					</li>
+					<li>
+						<a href="/catalog/2"><b>SUZUKI</b></a>
+					</li>
+					<li>
+						<a href="/catalog/3"><b>MERKURI</b></a>
+					</li>
+					<li>
+						<a href="/catalog/4"><b>TOHATSU</b></a>
+					</li>
+					<li>
+						<a href="/catalog/5"><b>PARSUN</b></a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href=""><b><br>РАСПРОДАЖА</b></a>
+			</li>
+			<li>
+				<a href=""><b><br>БРЕНДЫ</b></a>
+			</li>
+		</ul>
+		</div>
+	</nav>
+	<div class="wrap-main">
+		<div class="main">
+		<aside>
+			<form action="/catalog/filter" method="post">
+				<div class="storke">
+					<h4>ТИП МОТОРОВ</h4>
+					<p><label><input type="checkbox" value="2" name="storke2"> 2-х тактные</label></p>
+					<p><label><input type="checkbox" value="4"name="storke4"> 4-х тактные</label></p>
+				</div>
+				<div class="start">
+					<h4>ЗАПУСК</h4>
+					<p><label><input type="checkbox" value="r" name="start_r"> ручной</label></p>
+					<p><label><input type="checkbox" value="e" name="start_e"> електро</label></p>
+					<p><label><input type="checkbox" value="er" name="start_er"> ручной + електро</label></p>
+				</div>
+				<div class="control">
+					<h4>УПРАВЛЕНИЕ МОТОРОМ</h4>
+					<p><label><input type="checkbox" value="r" name="control_r"> румпель</label></p>
+					<p><label><input type="checkbox" value="d" name="control_d"> дистанционое</label></p>
+					<p><label><input type="checkbox" value="rd" name="control_rd"> румпель+дистанционое</label></p>
+				</div>
+				<div сlass="power">
+					<h4>МОЩНОСТЬ МОТОРА</h4>
+					<p><label><input type="checkbox" value="3.5" name="power_1"> 2-3,5 л.с</label></p>
+					<p><label><input type="checkbox" value="7.5" name="power_2"> 4-7,5 л.с</label></p>
+					<p><label><input type="checkbox" value="15" name="power_3"> 8-15 л.с</label></p>
+					<p><label><input type="checkbox" value="25" name="power_4"> 18-25 л.с</label></p>
+					<p><label><input type="checkbox" value="40" name="power_5"> 30-40 л.с</label></p>
+					<p><label><input type="checkbox" value="70" name="power_6"> 50-70 л.с</label></p>
+					<p><label><input type="checkbox" value="300" name="power_7"> более 70 л.с</label></p>
+				</div>
+				<div class="button">
+					<p><label><button type="submit" style="display: none;"></button>ПРИМЕНИТЬ</label></p>
+					<p><label><button type="reset" style="display: none;"></button>СБРОСИТЬ</label></p>
+				</div>
+			</form>
+		</aside>
+		<section>
+			<ul class="product-list">
+				<% list.forEach(function(item){ %>
+				<li>
+					<a href="goods.html">
+						<label><img src="<%=item.picture%>" alt="mot1" width="250" height="200" style="Cursor:pointer;">
+						<span class="name-prod" style="Cursor:pointer;">
+							<%=item.name%>
+						</span></label>
+					</a>
+					<hr>
+					<div class="price-prod">
+					    Цена:
+					    <h5><%=item.price%>,00</h5>	
+					</div>
+					<p><label><button value="<%=item.id%>" style="border: 0px solid #FFFFFF; Cursor:pointer;" onclick="buttonClickAddInCart(this)"><img src="/images/case.png" alt="case"></button></label></p>
+					
+				</li>
+				<% }); %>
+			</ul>
+		</section>
+	</div>
+	</div>
+	<div class="pagination">
+		
+	</div>
+	<footer>
+		
+	</footer>
+	</div>
+</body>
+</html>
