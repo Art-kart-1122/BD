@@ -24,8 +24,6 @@ body {
  
 .order {
   padding: 20px 30px;
-  eight: 120px;
-  isplay: flex;
   border-top:  1px solid #E1E8EE;
   border-bottom:  3px solid #E1E8EE;
 }
@@ -124,4 +122,15 @@ table {
   border: 2px solid grey;
   background-color: gainsboro;
   border-radius: 6px;
+}
+
+.filter img {
+  display: none;
+}
+.hdr-cab {
+  display: none;
+}
+
+.hdr-bus {
+  display: none;
 }

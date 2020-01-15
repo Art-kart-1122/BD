@@ -8,7 +8,8 @@ exports.ContrClientNew = function(req,responce) {
     	  console.log(err);
            }
            else {
-           responce.send('ok');
+           responce.send(JSON.stringify(docs));
+           console.log(JSON.stringify(docs));
            }
 		});
 			

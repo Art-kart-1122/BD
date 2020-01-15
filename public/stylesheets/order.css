@@ -121,7 +121,7 @@ nav .list-nav li .filter{
     display: none;
   }
 
-  .hid-sub {
+  .hid-sub, .hid-fail {
   display: none;
   position: fixed;
   z-index: 10;
@@ -139,4 +139,20 @@ nav .list-nav li .filter{
   background: #fff;
   margin-top: 40%;
   border-radius: 6px;
+}
+
+.filter {
+  display: none;
+}
+.hdr-cab {
+  display: none;
+}
+
+.hdr-bus {
+  display: none;
+}
+
+label:hover{
+  cursor: default;
+  color: black;
 }

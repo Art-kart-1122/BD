@@ -6,7 +6,6 @@ const multer  = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const Router =express.Router();
 const path = require('path');
-//var ModelControler = require('./controlers/model_motor');
 const catalog = require('./routes/rout_model_motor'); 
 const Admin = require('./routes/admin/model_motor_add');
 const Auth = require('./routes/rout_auth');
@@ -14,7 +13,6 @@ const Cart = require('./routes/rout_cart');
 const client = require('./routes/rout_client');
 const order = require('./routes/rout_order.js');
 const testadmin = require('./routes/rout_admin_order.js');
-
 
 
 var session = require('express-session');
@@ -42,7 +40,7 @@ app.use('/catalog',catalog);
 app.use('/client',client);
 app.use('/order',order);
 app.use('/test',testadmin);
-//importing route
+
 
 
 

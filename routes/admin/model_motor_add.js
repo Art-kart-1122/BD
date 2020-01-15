@@ -23,7 +23,7 @@ function checkSignIn(req, res, next){
    if(req.session.userlogin =='BanditBandit'){
       console.log(req.session.userlogin);
       console.log("yes");
-      next();     //If session exists, proceed to page
+      next();     
    } else {
       var err = new Error("Not logged in!");
       console.log(req.session.userlogin);

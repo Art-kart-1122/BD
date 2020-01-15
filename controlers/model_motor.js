@@ -14,7 +14,8 @@ exports.ContrGetForGoodsList = function(req, res) {
       });
     }
   });
-};
+}
+
 exports.ContrGetForGoodsListAll = function(req, res) {
   model_motor.GetForGoodsListAll(req, function(err, docs) {
 
@@ -29,7 +30,8 @@ exports.ContrGetForGoodsListAll = function(req, res) {
       });
     }
   });
-};
+}
+
 exports.ContrCreateModel= function(req,res) {
 	model_motor.CreateModel(req.body,function(err,response)
 	{
@@ -39,7 +41,7 @@ exports.ContrCreateModel= function(req,res) {
 		else {
 			console.log(response);
 		}
-	})
+	});
 }
 
 exports.ContrFilterModel = function(req,res) {
@@ -54,5 +56,16 @@ exports.ContrFilterModel = function(req,res) {
       	    list: response
             });
 		}
-	})
+	});
+}
+
+exports.ContrGetCountModel = function(res) {
+  model_motor.GetCountModel(function(err,response) {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      responce.send(JSON.stringify(response));
+    }
+  });
 }

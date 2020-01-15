@@ -9,82 +9,8 @@
 </head>
 <body >
 	
-		<header>
-		<ul class="hdrlist">
-			<li>
-				<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="200" height="50"></a><p>
-			</li>
-			<li>
-				<ul class="listmenu">
-					<li>
-					   <a href="">ГЛАВНАЯ</a> 
-					</li>
-					<li>
-						<a href="">ДОСТАВКА И ОПЛАТА</a>
-					</li>
-					<li>
-						<a href="">КОНТАКТИ</a>
-					</li>
-					<li>
-						<a href="">КРЕДИТ</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<div class="wrap" style="display: none;">
-					<div class="hdr-cab">
-						<a href="../auth/login"><img src="/images/kisspng-clip-art-computer-icons-user-download-chamber-of-d-talonpaw-svg-png-icon-free-download-175238-on-5b84c95a4d32a1.9639307815354289543162.png" alt="cabinet"width="42" height="42" >
-					</a>
-				</div>
-				<div class="hdr-bus"style="display: none;" >
-					<a href="../cart/orders">
-						<img src="/images/shopping-cart.svg" alt="basket"width="50" height="50" id="logocart" >
-					</a>
-				</div>
-				</div>
-			</li>
-		</ul>
-	</header>
-	<nav>
-		<div class="logo">
-			<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="350" height="100"></a><p>
-		</div>
-		<div class="wrap-list">
-			<ul class="list-nav">
-			<li>
-				<div class="filter" onclick="buttonClickfilter('on')" style="Cursor:pointer; display: none;">
-					<br><img src="/images/kisspng-computer-icons-filter-funnel-document-clip-art-5b27b2dea490a1.4319025915293283506741.png" alt="logo" width="60" height="30"></a>
-				</div>
-			</li>
-			<li>
-				<a href=""><b><br>ЛОДОЧНЫЕ МОТОРЫ</b></a>
-				<ul>
-					<li>
-						<a href=""><b>YAMAHA</b></a>
-					</li>
-					<li>
-						<a href=""><b>SUZUKI</b></a>
-					</li>
-					<li>
-						<a href=""><b>MERKURI</b></a>
-					</li>
-					<li>
-						<a href=""><b>TOHATSU</b></a>
-					</li>
-					<li>
-						<a href=""><b>PARSUN</b></a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href=""><b><br>РАСПРОДАЖА</b></a>
-			</li>
-			<li>
-				<a href=""><b><br>БРЕНДЫ</b></a>
-			</li>
-		</ul>
-		</div>
-	</nav>
+		<%- include('elements/header'); -%>
+        <%- include('elements/nav'); -%>
 	
 	<main>
 		<form method="post" enctype="multipart/form-data" style="margin-top: 300px; margin-bottom: 300px;">
@@ -98,9 +24,7 @@
 	
 	</main>
 	
-	<footer>
-		
-	</footer>
-	</div>
+	<%- include('elements/footer'); -%>
+	
 
 </body>

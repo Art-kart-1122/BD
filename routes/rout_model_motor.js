@@ -6,6 +6,8 @@ Router.get('/:limit', List.ContrGetForGoodsList);
 Router.get('/',List.ContrGetForGoodsListAll);
 Router.post('/filter',List.ContrFilterModel);
 
+Router.get('/pagination',List.ContrGetCountModel);
+
 module.exports= Router;
 /*
 module.exports = function(app) {

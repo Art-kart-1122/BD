@@ -15,6 +15,18 @@ exports.GetForGoodsList =function (quantity, result) {
     });           
 };
 
+exports.GetCountModel= function(result) {
+    mysqlConnection.query("select count(*) from Model", function (err, res) {
+        if(err) {
+            console.log("error: ", err);
+            result(err, null);
+        }
+        else {
+            result(null, res);
+        }
+    } )
+}
+
 exports.CartModel =function (req, result) { 
     var cart=[];
     var length = Object.keys(req.body).length;

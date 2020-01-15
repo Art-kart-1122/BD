@@ -6,20 +6,14 @@ function storage(v) {
 
 }
 
-exports.ContrGetCartModel = function(req,responce) {
-	    
-		
-		model_motor.CartModel(req,function(err,docs) {
-          if(err) {
-    	  console.log(err);
-           }
-           else {
-           
-            //console.log(docs);
-           	responce.send(JSON.stringify(docs));
-           }
-		});
-			
+exports.ContrGetCartModel = function(req, responce) {
+    model_motor.CartModel(req, function(err, docs) {
+        if (err) {
+            console.log(err);
+        } else {
+            responce.send(JSON.stringify(docs));
+        }
+    });
 }
 
 

@@ -1,165 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Moto-water</title>
-	<link rel="stylesheet" href="/stylesheets/main.css">
-	<link rel="stylesheet" href="/stylesheets/admin_order.css">
-	<script src="/jquery/jquery.js"></script>
-	<script type="text/javascript" src="/javascripts/admin_order.js"></script>
-	 
-</head>
-<body>
-<div class="wrap">
-		<header>
-		<ul class="hdrlist">
-			<li>
-				<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="200" height="50"></a><p>
-			</li>
-			<li>
-				<ul class="listmenu">
-					<li>
-					   <a href="">ГЛАВНАЯ</a> 
-					</li>
-					<li>
-						<a href="">ДОСТАВКА И ОПЛАТА</a>
-					</li>
-					<li>
-						<a href="">КОНТАКТИ</a>
-					</li>
-					<li>
-						<a href="">КРЕДИТ</a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<div class="wrap">
-					<div class="hdr-cab">
-						<a href="../../auth/login"><img src="/images/kisspng-clip-art-computer-icons-user-download-chamber-of-d-talonpaw-svg-png-icon-free-download-175238-on-5b84c95a4d32a1.9639307815354289543162.png" alt="cabinet"width="42" height="42" >
-					</a>
-				</div>
-				<div class="hdr-bus">
-					<a href="">
-						<img src="/images/shopping-cart.svg" alt="basket"width="50" height="50" >
-					</a>
-				</div>
-				</div>
-			</li>
-		</ul>
-	</header>
-	<nav>
-		<div class="logo">
-			<p><a href="/catalog"><img src="/images/Screenshot from 2019-11-15 18-01-04.png" alt="logo" width="350" height="100"></a><p>
-		</div>
-		<div class="wrap-list">
-			<ul class="list-nav">
-			<li>
-				<div class="filter" onclick="buttonClickfilter('on')">
-					<br><img src="/images/kisspng-computer-icons-filter-funnel-document-clip-art-5b27b2dea490a1.4319025915293283506741.png" alt="logo" width="60" height="30"></a>
-				</div>
-			</li>
-			<li>
-				<a href=""><b><br>ЛОДОЧНЫЕ МОТОРЫ</b></a>
-				<ul>
-					<li>
-						<a href=""><b>YAMAHA</b></a>
-					</li>
-					<li>
-						<a href=""><b>SUZUKI</b></a>
-					</li>
-					<li>
-						<a href=""><b>MERKURI</b></a>
-					</li>
-					<li>
-						<a href=""><b>TOHATSU</b></a>
-					</li>
-					<li>
-						<a href=""><b>PARSUN</b></a>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href=""><b><br>РАСПРОДАЖА</b></a>
-			</li>
-			<li>
-				<a href=""><b><br>БРЕНДЫ</b></a>
-			</li>
-		</ul>
-		</div>
-	</nav>
-	<div class="wrap-main">
-		<div class="main">
-			<div id="shopping-cart" class="shopping-cart">
-      <!-- Title -->
-      <div class="title" id="title" style="margin-left: 80px;">
-        Заказы
-      </div>
 
-      <% list.forEach(function(item){ %>
-      <div class="order">
-      <ul>
-      	<li>
-      		<p> Номер закзаза  </p>
-      		<div class="val"><%=item.o1id%></div>
-      	</li>
-      	<li>
-      		<p> Цена заказа  </p>
-      		<div class="val"><%=item.o1pice%></div>
-      	</li>
-      	<li>
-      		<p> Способ оплати  </p>
-      		<div class="val"><%=item.o1payment%></div>
-      	</li>
-      	<li>
-      		<p> Коментарий к заказу  </p>
-      		<div class="val"><%=item.o1comments%></div>
-      	</li>
-      	<li>
-      		<p> Статус заказа </p>
-      		<div class="val"><%=item.o1status%></div>
-      	</li>
-      	<li>
-      		<p> Даные заказчика  </p>
-      		<div class="val"><%=item.csurname%></div>
-      	</li>
-      	<li>
-      		<p> Телефон заказчика  </p>
-      		<div class="val"><%=item.cphone%></div>
-      	</li>
-      	<li>
-      		<p> Местоположение заказчика  </p>
-      		<div class="val"><%=item.cgeozone%></div>
-      	</li>
-      	<li>
-      		<p> Скидочный промокод  </p>
-      		<div class="val"><%=item.csale%></div>
-      	</li>
-      </ul>
-      <button class="showModel" value="<%=item.o1id%>" style=" Cursor:pointer; border-color: red;">Заказаный товар</button>
-      <table>
-      	<thead>
-      		<tr>
-      			<td> Номер </td>
-      			<td>Название</td>
-      			<td>Доступность</td>
-      			<td>Цена</td>
-      			<td>Kоличество</td>
-      		</tr>
-      	</thead>
-      	<tbody id="cart<%=item.o1id%>">
-      		
-      	</tbody>
-      </table>
-      <button id="done<%=item.o1id%>" class="done" value="<%=item.o1id%>" style="width: 100px; height: 50px; border-radius: 6px;">Виполнено</button>
-    </div>
-     <% }); %>
-	</div>
-	
-  </div>
-	</div>
-	
-	<footer>
-		
-	</footer>
+<head>
+    <meta charset="UTF-8">
+    <title>Moto-water</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/admin_order.css">
+    <script src="/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/admin_order.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <%- include('elements/header'); -%>
+        <%- include('elements/nav'); -%>
+        <div class="wrap-main">
+            <div class="main">
+                <div id="shopping-cart" class="shopping-cart">
+                    <!-- Title -->
+                    <div class="title" id="title" style="margin-left: 80px;">
+                        Заказы
+                    </div>
+                    <% list.forEach(function(item){ %>
+                    <div class="order">
+                        <ul>
+                            <li>
+                                <p> Номер закзаза </p>
+                                <div class="val">
+                                    <%=item.o1id%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Цена заказа </p>
+                                <div class="val">
+                                    <%=item.o1pice%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Способ оплати </p>
+                                <div class="val">
+                                    <%=item.o1payment%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Коментарий к заказу </p>
+                                <div class="val">
+                                    <%=item.o1comments%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Статус заказа </p>
+                                <div class="val">
+                                    <%=item.o1status%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Даные заказчика </p>
+                                <div class="val">
+                                    <%=item.csurname%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Телефон заказчика </p>
+                                <div class="val">
+                                    <%=item.cphone%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Местоположение заказчика </p>
+                                <div class="val">
+                                    <%=item.cgeozone%>
+                                </div>
+                            </li>
+                            <li>
+                                <p> Скидочный промокод </p>
+                                <div class="val">
+                                    <%=item.csale%>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="showModel" value="<%=item.o1id%>" style=" Cursor:pointer; border-color: red;">Заказаный товар</button>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td> Номер </td>
+                                    <td>Название</td>
+                                    <td>Доступность</td>
+                                    <td>Цена</td>
+                                    <td>Kоличество</td>
+                                </tr>
+                            </thead>
+                            <tbody id="cart<%=item.o1id%>">
+                            </tbody>
+                        </table>
+                        <button id="done<%=item.o1id%>" class="done" value="<%=item.o1id%>" style="width: 100px; height: 50px; border-radius: 6px;">Виполнено</button>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+        <%- include('elements/footer'); -%>
 </body>
+
 </html>
